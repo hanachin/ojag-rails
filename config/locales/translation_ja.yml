@@ -1,0 +1,39 @@
+ja:
+  activerecord:
+    models:
+      order: 順序  #g
+      order_detail: 順序の細部  #g
+      product: プロダクト  #g
+
+    attributes:
+      order:
+        company_fax: 会社のファクシミリ  #g
+        company_location: 会社の位置  #g
+        company_name: 会社名  #g
+        company_phone: 会社の電話  #g
+        company_zip_code: 会社の郵便番号  #g
+        customer_name: 顧客名  #g
+        delivering_at: で渡すこと  #g
+        delivery_place: 配達場所  #g
+        note: ノート  #g
+        order_code: オーダーコード  #g
+        order_details: 順序の細部  #g
+        ordered_at: で命令される  #g
+        products: プロダクト  #g
+
+      order_detail:
+        order: :activerecord.models.order  #g
+        product: :activerecord.models.product  #g
+        product_name: 製品名  #g
+        product_type_number: 製品タイプ数  #g
+        product_unit: プロダクト単位  #g
+        quantity: 量  #g
+        unit_price: 単価  #g
+
+      product:
+        name: 名前  #g
+        order_details: 順序の細部  #g
+        orders: 順序  #g
+        type_number: タイプ数  #g
+        unit: 単位  #g
+        unit_price: 単価  #g

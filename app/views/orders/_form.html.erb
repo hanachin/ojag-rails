@@ -1,0 +1,65 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :account_id %><br />
+    <%= f.number_field :account_id %>
+  </div>
+  <div class="field">
+    <%= f.label :order_code %><br />
+    <%= f.text_field :order_code %>
+  </div>
+  <div class="field">
+    <%= f.label :delivery_place %><br />
+    <%= f.text_field :delivery_place %>
+  </div>
+  <div class="field">
+    <%= f.label :delivering_at %><br />
+    <%= f.date_select :delivering_at %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_name %><br />
+    <%= f.text_field :customer_name %>
+  </div>
+  <div class="field">
+    <%= f.label :company_name %><br />
+    <%= f.text_field :company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :company_location %><br />
+    <%= f.text_field :company_location %>
+  </div>
+  <div class="field">
+    <%= f.label :company_zip_code %><br />
+    <%= f.text_field :company_zip_code %>
+  </div>
+  <div class="field">
+    <%= f.label :company_phone %><br />
+    <%= f.text_field :company_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :company_fax %><br />
+    <%= f.text_field :company_fax %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br />
+    <%= f.text_area :note %>
+  </div>
+  <div class="field">
+    <%= f.label :ordered_at %><br />
+    <%= f.datetime_select :ordered_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
